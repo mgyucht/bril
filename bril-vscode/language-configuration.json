@@ -1,0 +1,31 @@
+{
+	"comments": {
+		"lineComment": "#"
+	},
+	"brackets": [
+		["{", "}"],
+		["(", ")"]
+	],
+	"autoClosingPairs": [
+		{ "open": "{", "close": "}" },
+		{ "open": "(", "close": ")" }
+	],
+	"surroundingPairs": [
+		["{", "}"],
+		["(", ")"]
+	],
+	"folding": {
+		"markers": {
+            // Support folding function definitions.
+			"start": "^\\s*@[_%\\w][_%.\\w\\d]*\\([^)]*\\)\\s*(:\\s*\\w+\\s*)?\\{",
+			"end": "^\\s*\\}"
+		}
+	},
+	"wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
+	"indentationRules": {
+        // Indent in functions
+		// Should not indent in comments, but this is not working yet.
+		"increaseIndentPattern": "^(?![^\\@]*\\#)\\s*@[_%\\w][_%.\\w\\d]*\\([^)]*\\)\\s*(:\\s*\\w+\\s*)?\\{",
+		"decreaseIndentPattern": "^(?![^\\}]*\\#)\\s*\\}"
+	}
+}
