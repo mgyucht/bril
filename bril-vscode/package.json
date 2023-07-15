@@ -1,13 +1,13 @@
 {
   "name": "bril-vscode",
   "displayName": "bril-vscode",
-  "description": "VS Code Extension for the Bril language.",
+  "description": "VS Code extension for the Bril language.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -21,6 +21,7 @@
     "languages": [
       {
         "id": "bril",
+        "aliases": ["Bril", "bril"],
         "extensions": [
           ".bril"
         ],
@@ -31,7 +32,7 @@
       {
         "language": "bril",
         "scopeName": "source.bril",
-        "path": "./syntaxes/bril.tmGrammar.json"
+        "path": "./syntaxes/bril.tmLanguage.json"
       }
     ]
   },

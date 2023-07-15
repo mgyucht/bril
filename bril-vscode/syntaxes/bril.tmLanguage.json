@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Bril",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#ops"
+		},
+		{
+			"include": "#types"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.bril",
+					"match": "^#.*$"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.bril",
+					"match": "@([%\\w][%.\\w\\d]+)",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.bril"
+						}
+					}
+				},
+				{
+					"name": "entity.name.section.bril",
+					"match": "(\\.[%\\w][%.\\w\\d]+):",
+					"captures": {
+						"1": {
+							"name": "entity.name.section.bril"
+						}
+					}
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.bril",
+					"match": "\\b(int|bool)\\b"
+				}
+			]
+		},
+		"ops": {
+			"patterns": [
+				{
+					"name": "keyword.operator.arithmetic.bril",
+					"match": "\\b(add|mul|sub|div)\\b"
+				},
+				{
+					"name": "keyword.operator.comparison.bril",
+					"match": "\\b(eq|lt|le|gt|ge)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.bril",
+					"match": "\\b(not|and|or)\\b"
+				},
+				{
+					"name": "keyword.operator.bril",
+					"match": "\\b(print|id|nop)\\b"
+				},
+				{
+					"name": "keyword.control.bril",
+					"match": "\\b(jmp|br|call|ret)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.bril"
+}
