@@ -13,6 +13,9 @@
 		},
 		{
 			"include": "#types"
+		},
+		{
+			"include": "#literals"
 		}
 	],
 	"repository": {
@@ -37,7 +40,7 @@
 				},
 				{
 					"name": "entity.name.section.bril",
-					"match": "(\\.[%\\w][%.\\w\\d]+):",
+					"match": "(\\.[%\\w][%.\\w\\d]+)",
 					"captures": {
 						"1": {
 							"name": "entity.name.section.bril"
@@ -75,6 +78,18 @@
 				{
 					"name": "keyword.control.bril",
 					"match": "\\b(jmp|br|call|ret)\\b"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"name": "constant.numeric.bril",
+					"match": "\\b[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)\\b"
+				},
+				{
+					"name": "constant.language.bril",
+					"match": "\\b(true|false)\\b"
 				}
 			]
 		}
